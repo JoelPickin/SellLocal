@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="SellLocal.Views.Main.MainPage">
+    <StackLayout>
+        <!--Products/Store switcher buttons-->
+        <StackLayout Orientation="Horizontal">
+            <Button Text="Products"/>
+            <Button Text="Stores"/>
+        </StackLayout>
+
+        <!--Filter buttons-->
+        <StackLayout>
+            <CollectionView>
+                
+            </CollectionView>
+        </StackLayout>
+        
+        <!--Products-->
+        <StackLayout>
+            <CollectionView>
+                
+            </CollectionView>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

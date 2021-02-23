@@ -9,6 +9,7 @@
         <StackLayout VerticalOptions="Center">
             <Label Text="Enter your postcode to see what people are selling locally" HorizontalOptions="Center"/>
             <SearchBar Placeholder="Enter Postcode..." Text="{Binding Postcode}" SearchCommand="{Binding PostcodeSearchCommand}"/>
+            <Label Text="{Binding ErrorText}" TextColor="Red"/>
         </StackLayout>
     </StackLayout>
 </ContentPage>

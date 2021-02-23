@@ -1,0 +1,24 @@
+﻿** Search Postcode Section **
+- Input postcode.
+- Capture postcode and search for shops that are in the delivery radius, or calculate the delivery distance by miles to and from the postcodes.
+- Return all shops that deliver to that postcode & filter
+
+
+? How do we use radius to search ?
+- Google Maps API?
+
+
+|| Shop Model ||
+- Id
+- Shop Name
+- Profile Image
+- Cover Image
+- Description
+- Location/Postcode
+- Local Delivery Only? 
+
+|| User Model ||
+- Id
+- Username
+- Password
+- Address

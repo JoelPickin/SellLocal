@@ -13,6 +13,7 @@ namespace SellLocal.ViewModels.Search
     {
         public ICommand PostcodeSearchCommand { get; set; }
         public string Postcode { get; set; }
+        public string ErrorText { get; set; }
 
         public PostcodeSearchPageViewModel(INavigationService navigationService) 
             : base(navigationService)
@@ -22,7 +23,14 @@ namespace SellLocal.ViewModels.Search
 
         private void PostcodeSearch(object obj)
         {
-            throw new NotImplementedException();
+            if (string.IsNullOrEmpty(Postcode))
+            {
+                ErrorText = "You must enter a postcode to continue";
+            }
+            else
+            {
+                NavigationService.NavigateAsync("MainPage");
+            }
         }
     }
 }

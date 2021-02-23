@@ -1,8 +1,10 @@
 using Prism;
 using Prism.Ioc;
 using SellLocal.ViewModels;
+using SellLocal.ViewModels.Main;
 using SellLocal.ViewModels.Search;
 using SellLocal.Views;
+using SellLocal.Views.Main;
 using SellLocal.Views.Search;
 using Xamarin.Essentials.Implementation;
 using Xamarin.Essentials.Interfaces;
@@ -29,8 +31,8 @@ namespace SellLocal
             containerRegistry.RegisterSingleton<IAppInfo, AppInfoImplementation>();
 
             containerRegistry.RegisterForNavigation<NavigationPage>();
-            containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
             containerRegistry.RegisterForNavigation<PostcodeSearchPage, PostcodeSearchPageViewModel>();
+            containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
         }
     }
 }

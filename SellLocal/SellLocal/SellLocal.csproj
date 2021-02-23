@@ -16,11 +16,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ViewModels\Search\" />
-    <Folder Include="Views\Main\" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <EmbeddedResource Update="Views\Main\MainPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\Search\PostcodeSearchPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
