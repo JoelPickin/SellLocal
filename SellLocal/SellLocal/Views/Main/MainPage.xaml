@@ -4,24 +4,48 @@
              xmlns:prism="http://prismlibrary.com"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="SellLocal.Views.Main.MainPage">
-    <StackLayout>
+    <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
         <!--Products/Store switcher buttons-->
-        <StackLayout Orientation="Horizontal">
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
             <Button Text="Products"/>
             <Button Text="Stores"/>
         </StackLayout>
 
         <!--Filter buttons-->
-        <StackLayout>
-            <CollectionView>
-                
+        <StackLayout VerticalOptions="Start" HeightRequest="100">
+            <CollectionView ItemsSource="{Binding FilterList}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout BackgroundColor="HotPink" Padding="10" Margin="10">
+                            <Image Source="{Binding FilterImage}"/>
+                            <Label Text="{Binding FilterText}"/>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Horizontal" 
+                                       ItemSpacing="20"/>
+                </CollectionView.ItemsLayout>
             </CollectionView>
         </StackLayout>
         
         <!--Products-->
         <StackLayout>
-            <CollectionView>
-                
+            <CollectionView ItemsSource="{Binding ProductList}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout BackgroundColor="HotPink">
+                            <Image Source="{Binding ProductImage}"/>
+                            <Label Text="{Binding ProductText}"/>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Vertical" 
+                                     Span="2" 
+                                     VerticalItemSpacing="10" 
+                                     HorizontalItemSpacing="30"/>
+                </CollectionView.ItemsLayout>
             </CollectionView>
         </StackLayout>
     </StackLayout>
